@@ -17,7 +17,8 @@ async function login() {
         localStorage.setItem("token", token);
 
         // Fetch role from Firestore via backend
-        const res = await fetch(`${API_BASE}/owner/dashboard`, {
+        const res = await fetch(`${API_URL}
+/owner/dashboard`, {
             headers: { Authorization: "Bearer " + token }
         });
 
@@ -27,7 +28,8 @@ async function login() {
             return;
         }
 
-        const empRes = await fetch(`${API_BASE}/employee/dashboard`, {
+        const empRes = await fetch(`${API_URL}
+/employee/dashboard`, {
             headers: { Authorization: "Bearer " + token }
         });
 
@@ -60,7 +62,8 @@ async function loadOwnerDashboard() {
     await loadComponent("sidebar", "components/sidebar.html");
     applyRoleUI("owner");
 
-    const res = await fetch(`${API_BASE}/owner/dashboard`, {
+    const res = await fetch(`${API_URL}
+/owner/dashboard`, {
         headers: authHeader()
     });
     const data = await res.json();
@@ -82,7 +85,8 @@ async function loadEmployeeDashboard() {
     await loadComponent("sidebar", "components/sidebar.html");
     applyRoleUI("employee");
 
-    const res = await fetch(`${API_BASE}/employee/dashboard`, {
+    const res = await fetch(`${API_URL}
+/employee/dashboard`, {
         headers: authHeader()
     });
     const data = await res.json();
