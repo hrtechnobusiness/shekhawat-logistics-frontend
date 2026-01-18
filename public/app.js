@@ -1,5 +1,18 @@
 const API_URL = "https://shekhawat-logistics-backend.onrender.com";
 
+// ------------------------------
+// FIREBASE INITIALIZATION
+// ------------------------------
+const firebaseConfig = {
+    apiKey: "AIzaSyCq3-gKCPm2k2H9wePlAeNdisYueXvXbj8",
+    authDomain: "shekhawat-logistics-portal.firebaseapp.com",
+    projectId: "shekhawat-logistics-portal",
+    storageBucket: "shekhawat-logistics-portal.appspot.com",
+    messagingSenderId: "1011587169398",
+    appId: "1:1011587169398:web:a7083cd52aa03bbd7a20f1"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 // -----------------------------
 // LOGIN
