@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Dashboard - Shekhawat Logistics</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <h1>Owner Dashboard</h1>
+
+        <!-- TOP CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <h1 id="totalEmployees">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total Parcels Today</h3>
+                <h1 id="totalParcels">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Delivered Today</h3>
+                <h1 id="delivered">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Pending Deliveries</h3>
+                <h1 id="pending">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Returned Parcels</h3>
+                <h1 id="returned">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Missing Parcels</h3>
+                <h1 id="missing">0</h1>
+            </div>
+        </div>
+
+        <!-- AREA-WISE BAR CHART -->
+        <div class="chart-container">
+            <h2>Area-wise Pending Deliveries</h2>
+            <canvas id="areaBarChart"></canvas>
+        </div>
+
+        <!-- AREA-WISE MISSING PIE -->
+        <div class="chart-container">
+            <h2>Area-wise Missing</h2>
+            <canvas id="missingPieChart"></canvas>
+        </div>
+
+        <!-- DAILY TREND -->
+        <div class="chart-container">
+            <h2>Daily Delivery Trend</h2>
+            <canvas id="trendChart"></canvas>
+        </div>
+
+        <!-- EMPLOYEE PERFORMANCE -->
+        <div class="chart-container">
+            <h2>Employee Performance</h2>
+            <canvas id="employeeChart"></canvas>
+        </div>
+
+        <!-- PARCEL TABLE -->
+        <div class="table-box">
+            <h2>All Parcels</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>AWB</th>
+                        <th>Customer</th>
+                        <th>Area</th>
+                        <th>Status</th>
+                        <th>Assigned To</th>
+                    </tr>
+                </thead>
+                <tbody id="parcelTable"></tbody>
+            </table>
+        </div>
+
+        <!-- EMPLOYEE TABLE -->
+        <div class="table-box">
+            <h2>Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Total Deliveries</th>
+                        <th>Pending</th>
+                        <th>Returned</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="charts.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

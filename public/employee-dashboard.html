@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+
+    <div class="main">
+        <h1>My Dashboard</h1>
+
+        <!-- TOP CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Assigned</h3>
+                <h1 id="empTotal">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Delivered</h3>
+                <h1 id="empDelivered">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <h1 id="empPending">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Returned</h3>
+                <h1 id="empReturned">0</h1>
+            </div>
+        </div>
+
+        <!-- EMPLOYEE TREND -->
+        <div class="chart-container">
+            <h2>My Performance Trend</h2>
+            <canvas id="empTrendChart"></canvas>
+        </div>
+
+        <!-- MY PARCEL TABLE -->
+        <div class="table-box">
+            <h2>My Deliveries</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>AWB</th>
+                        <th>Customer</th>
+                        <th>Area</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="empParcelTable"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="charts.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

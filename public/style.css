@@ -1,0 +1,196 @@
+
+/* ------------------------------
+   GLOBAL STYLES
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+:root {
+    --primary: #0b7dda;
+    --primary-dark: #085a9c;
+    --bg-light: #ffffff;
+    --text-dark: #222;
+    --text-light: #777;
+}
+
+
+/* ------------------------------
+   LOGIN PAGE
+--------------------------------*/
+.login-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00000020;
+    text-align: center;
+}
+
+.login-logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: var(--primary-dark);
+}
+
+#login-error {
+    color: red;
+    margin-top: 12px;
+}
+
+
+
+/* ------------------------------
+   DASHBOARD LAYOUT
+--------------------------------*/
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--primary);
+    color: #fff;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 10px;
+    margin: 6px 0;
+    background: #ffffff20;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #ffffff40;
+}
+
+.main {
+    margin-left: 270px;
+    padding: 25px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000015;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+.card h1 {
+    margin-top: 10px;
+    font-size: 32px;
+    color: var(--text-dark);
+}
+
+/* TABLE */
+.table-box {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #fafafa;
+}
+
+
+/* CHARTS */
+.chart-container {
+    margin-top: 35px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+/* ------------------------------
+   TOPBAR
+--------------------------------*/
+.topbar {
+    background: #fff;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
